@@ -1,0 +1,63 @@
+/* * {
+    box-size: border-box;
+}
+
+.header-row {
+    height: 7%;
+}
+
+.home-row {
+    border: 1px solid green;
+    height: 85%;
+}
+
+.footer-row {
+    height: 3%;
+}
+
+.header-column {
+    border: 2px dotted purple;
+}
+
+.home-column {
+    border: 1px solid blue;
+}
+
+.footer-column {
+    border: 2px double yellow;
+}
+
+form {
+    width: 500px;
+    margin: auto;
+}
+
+/* -------------------------------------------------------- */
+
+/* table, td, tr, th {
+    border: 1px solid black;
+} */
+
+                                                /* WELCOME PAGE */
+
+/* .welcome-image {
+    height: 20vh;
+    width: 40vw;
+} */
+/* 
+.main-container {
+    height: 500px;
+} */
+
+.card {
+    box-shadow: 2px 2px 10px black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.my-form {
+    /* border: 1px solid red; */
+    margin: 10px;
+    padding: 5px;
+    border-bottom: 2px solid black;
+}

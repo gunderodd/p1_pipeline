@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="">
+    <title>Beaver Trust Fiduciary Web App</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+        <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/beaver.png"/>Beaver Trust Fiduciary</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#somethingCustom" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="somethingCustom">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="form.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Get Started</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    
+    <div class="container main-container">
+        <!-- i won't be appending just a name, i'll append the whole h1 from js -->
+        <div class="card">
+            <h1 id="title" class="card-title" style="text-align: center;">Open new Checking/Savings Account: </h1>
+            <div class="card-body">
+                <div class="form-group" style="border-bottom: 2px solid black; padding-bottom: 5px;">
+                    <label for="newName">What would you like to name your new account?</label>
+                    <div class="form-group">
+                        <input type="text" id="newName">
+                    </div>
+                    <label for="newAmount">How much will you be depositing to open your acccount?</label>
+                    <div class="form-group">
+                        <input type="text" id="newAmount">
+                    </div>
+                    <button class="btn btn-primary" id="createSubmit">Create</button>
+                </div>
+                <div class="row">
+                    <a href="accounts_view.html" class="badge badge-secondary" id="seeAccounts" style="margin: 10px; font-size: 1.5em;">Access your existing accounts</a>
+                </div>
+            </div>
+        </div>       
+    </div>
+    
+    <script src="scripts/create_bank_account.js">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

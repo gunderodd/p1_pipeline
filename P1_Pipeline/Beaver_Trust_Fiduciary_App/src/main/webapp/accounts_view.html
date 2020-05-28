@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="">
+    <title>Beaver Trust Fiduciary Web App</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+        <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/beaver.png"/>Beaver Trust Fiduciary</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#somethingCustom" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="somethingCustom">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="create_user_account.html" class="nav-link">Get Started</a></li>
+                </ul>
+            </div>
+    </nav>
+    
+    <div class="container main-container" style="height: 500px;">
+        <div class="card text-start">
+            <div class="card-body">
+                <h1 class="card-title" id="accountsTitle" style="text-align: center;">User Accounts View</h1>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Account Name</th>
+                            <th scope="col">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountList">
+                        <!-- dynamically filled with JSON content -->
+                    </tbody>
+                </table>
+
+                <div id="userForm">
+                    <div class="my-form">
+                        <h3>Deposit: Select account, enter deposit amount, and click "Deposit"</h3>
+                        <label for="depositAccount">Account Name: </label>
+                        <div class="form-group">
+                            <input type="text" id="depositAccount" placeholder="Account Name">
+                        </div>
+                        <label for="depositAmount">How much will you be depositing?</label>
+                        <div class="form-group">
+                            <input type="text" id="depositAmount" placeholder="Deposit Amount">
+                        </div>
+                        <button class="btn btn-primary" id="depositSubmit">Deposit</button>
+                    </div>
+                    <div class="my-form">
+                        <h3>Withdraw: Select account, enter withdrawal amount, and click "Withdraw"</h3>
+                        <label for="withdrawAccount">Account Name: </label>
+                        <div class="form-group">
+                            <input type="text" id="withdrawAccount" placeholder="Account Name">
+                        </div>
+                        <label for="withdrawAmount">How much will you be withdrawing?</label>
+                        <div class="form-group">
+                            <input type="text" id="withdrawAmount" placeholder="Withdrawal Amount">
+                        </div>
+                        <button class="btn btn-primary" id="withdrawSubmit">Withdraw</button>
+                    </div>
+                    <div class="my-form">
+                        <h3>Transfer: Select account to transfer from, to transfer to, enter withdrawal amount, and click "Transfer"</h3>
+                        <label for="transferFromAccount">Select account to transfer from.</label>
+                        <div class="form-group">
+                            <input type="text" id="transferFromAccount" placeholder="Transfer FROM">
+                        </div>
+                        <label for="transferToAccount">Select account to transfer to.</label>
+                        <div class="form-group">
+                            <input type="text" id="transferToAccount" placeholder="Transfer TO">
+                        </div>
+                        <label for="transferAmount">How much will you be transfering?</label>
+                        <div class="form-group">
+                            <input type="text" id="transferAmount" placeholder="Transfer Amount">
+                        </div>
+                        <button class="btn btn-primary" id="transferSubmit">Transfer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // the function to get cookie by name
+        function getCookieValue(a) {
+            var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+            return b ? b.pop() : '';
+        }
+
+        // setup, get cookie and place to put it
+        let title = document.getElementById("accountsTitle");
+        let userCookie = getCookieValue("username").toUpperCase();
+
+        // place cookie in html (see username)
+        title.innerHTML = `${userCookie}'s Accounts:`;
+                
+    </script>
+    
+    
+    <script src="scripts/listAccounts.js"></script>
+    <script src="scripts/deposit.js"></script>
+    <script src="scripts/withdraw.js"></script>
+    <script src="scripts/transfer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
