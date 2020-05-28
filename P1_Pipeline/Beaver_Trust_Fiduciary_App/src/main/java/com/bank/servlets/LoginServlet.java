@@ -48,8 +48,11 @@ public class LoginServlet extends HttpServlet {
 	    System.out.println("username = " + user.getUsername());
 	    System.out.println("password = " + user.getPassword());
 	    
-		String username = user.getUsername();
-		String password = user.getPassword();
+//		String username = user.getUsername();
+//		String password = user.getPassword();
+		String username = "ethan1";
+		String password = "ethan1";
+	    
 				
 		res.setContentType("application/json");
 		PrintWriter writer = res.getWriter();
