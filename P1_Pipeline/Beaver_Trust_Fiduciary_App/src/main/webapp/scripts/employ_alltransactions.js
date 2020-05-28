@@ -16,7 +16,8 @@ function listAllTransactions() {
     table2.style.display = "table";
     table3.style.display = "none";
 
-    fetch('http://localhost:9999/Beaver_Trust_Fiduciary_App/getalltransactions')
+    // fetch('http://localhost:9999/Beaver_Trust_Fiduciary_App/getalltransactions')
+    fetch('http://34.221.173.151:9999/Beaver_Trust_Fiduciary_App/getalltransactions')
         .then(response => {
             // console.log(response)
             return response.json();
