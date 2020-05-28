@@ -11,7 +11,7 @@ let password = document.getElementById("password").value;
 console.log(username);
 console.log(password);    
 
-fetch('http://localhost:9999/Beaver_Trust_Fiduciary_App/login', {
+fetch('http://34.221.173.151:9999/Beaver_Trust_Fiduciary_App/login', {
         method: 'POST',
         body: JSON.stringify({
         username: username,
