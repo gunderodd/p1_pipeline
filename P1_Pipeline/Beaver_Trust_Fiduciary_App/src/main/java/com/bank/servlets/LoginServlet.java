@@ -96,7 +96,7 @@ public class LoginServlet extends HttpServlet {
 //		}
 //	}
 		
-		res.setContentType("application/json".);
+		res.setContentType("application/json");
 		PrintWriter writer = res.getWriter();
 		writer.write("user_home.html");
 	}
